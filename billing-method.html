@@ -1,0 +1,11 @@
+<div class="container text-center py-5 px-4">
+    <div class="radio-toolbar">
+        <div class="position-relative mb-2 custom-control custom-radio custom-control-inline" *ngFor="let a of [1,2,3,4]; let i=index">
+            <input type="radio" id="radio{{i}}" value="radio{{i}}" name="pet_names">
+            <label for="radio{{i}}" class="d-flex align-items-center custom-control-label red">
+                <img src="https://www.kindpng.com/picc/m/495-4950400_paypal-hd-png-download.png" class="logo">
+                <div class="f-bold ms-2">Oscar</div>
+            </label>
+        </div>
+    </div>
+</div>

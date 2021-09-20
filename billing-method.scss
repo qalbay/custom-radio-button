@@ -1,0 +1,98 @@
+.logo{
+    height: 50px;
+}
+
+//custom radio button css
+.radio-toolbar {
+    margin: 10px;
+}
+
+.radio-toolbar label {
+    background: whitesmoke;
+    font-size: 18px;
+    color: black;
+    border-radius: 3px;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 8px;
+    outline: 0;
+    box-shadow: none;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.radio-toolbar label:hover {
+    background: #faf5fb;
+    border: 1px solid #931023;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+    background: #faf5fb;
+    border: 1px solid #931023;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background: #faf5fb;
+    border: 1px solid #931023;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff !important;
+    border-color: #931023 !important;
+}
+
+//custom css for radio input
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 8px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    // color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right:12px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid lightgrey;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: "\2713";
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    background: #931023;
+    color: white;
+    position: absolute;
+    top: 23px;
+    right:12px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
